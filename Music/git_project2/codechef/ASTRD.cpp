@@ -73,8 +73,7 @@ int main()
 			if(points[i][3]==temp)
 			{
 				temp2 = sqrt((points[i][0]*points[i][0]) + (points[i][1] * points[i][1]) + (points[i][2] * points[i][2]));
-				cout<<temp2;
-				if(temp2 - R <0.001)
+				if(temp2<=R)
 				ans--;
 			}
 		}
