@@ -1,2 +1,2 @@
 # codeforces-codechef
-Codes for programs solved in codeforces, codechef, spoj
+Codes for programs solved in codeforces, codechef and various contests
