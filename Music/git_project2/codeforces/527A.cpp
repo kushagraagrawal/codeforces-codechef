@@ -1,27 +1,21 @@
-#include<bits/stdc++.h>
+#include <cstdio>
 using namespace std;
-int main()
-{
-	long long int a,b;
-	long long int count=0;
-	cin>>a>>b;
-	while (a>0 && b>0)
-	{
-		if (a>b)
-		{             
-			a = a-b;
-			count++;
-		}
-		else if(b>a) 
-		{
-		b = b - a;
-		count++;}
-		else
-		{
-		count++;
-		break;
-	}
-	}
-	cout<<count<<endl;
-	return 0;
+
+int main() {
+  long long a, b;
+  scanf("%I64d%I64d", &a, &b);
+
+  long long ans = a / b;
+  long long c = a - ans * b;
+  while(c != 0) {
+    a = b;
+    b = c;
+    long long buf = a / b;
+    c = a - buf * b;
+    ans += buf;
+  }
+
+  printf("%I64d\n", ans);
+
+  return 0;
 }
